@@ -1,0 +1,31 @@
+{
+    "name": "piece/stagehand-fsm",
+    "type": "library",
+    "description": "A finite state machine",
+    "keywords": ["fsm", "state machine"],
+    "homepage": "https://github.com/piece/stagehand-fsm/wiki",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "KUBO Atsuhiro",
+            "email": "kubo@iteman.jp"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "phpmentors/domain-kata": "~1.4",
+        "symfony/event-dispatcher": "~2.8|~3.0|~4.0"
+    },
+    "require-dev": {
+        "phake/phake": "~2.3",
+        "phpunit/phpunit": "~4.8"
+    },
+    "autoload": {
+        "psr-4": { "Stagehand\\FSM\\": "src/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.6.x-dev"
+        }
+    }
+}

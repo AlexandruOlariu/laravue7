@@ -1,0 +1,60 @@
+<template>
+<div>
+    <bpmn_insert :prs="pullrequests"></bpmn_insert>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">title</th>
+            <th scope="col">state</th>
+            <th scope="col">primestecomanda</th>
+            <th scope="col">faceblatulsiingredientele</th>
+            <th scope="col">daulacuptor</th>
+            <th scope="col">url</th>
+        </tr>
+        </thead>
+        <tbody>
+
+
+        <tr v-for="pullrequest in pullrequests">
+            <td>{{ pullrequest.id }}</td>
+            <td>{{ pullrequest.title }}</td>
+            <td>{{ pullrequest.state }}</td>
+            <td>{{ toInt(pullrequest.primestecomanda) }}</td>
+            <td>{{ toInt(pullrequest.faceblatulsiingredientele) }}</td>
+            <td>{{ toInt(pullrequest.daulacuptor) }}</td>
+            <td>
+                <bpmn_ds :pr='pullrequest'></bpmn_ds>
+            </td>
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</template>
+
+<script>
+    import Bpmn_insert from "./bpmn_insert";
+    export default {
+        name: "bpmn_table",
+        components: {Bpmn_insert},
+        props:[
+            'prs'
+        ],
+        data:function () {
+            return{
+                pullrequests:this.prs,
+            }
+        },
+        methods:{
+          toInt:function (data) {
+              if(data==false)
+                  return 0;
+              else return 1;
+          }
+        },
+
+    }
+</script>
+
+
