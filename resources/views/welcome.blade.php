@@ -71,9 +71,14 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ url('/login/okta') }}">Log in with Okta</a>
+                        <a href="{{ route('login') }}">Login with LARAVEL</a>
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register in LARAVEL</a>
+                        @endif
                     @endauth
                 </div>
             @endif
+
 
             <div class="content">
 

@@ -3,6 +3,7 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import Pricing from "./components/Pricing";
 
 require('./bootstrap');
 
@@ -22,12 +23,15 @@ Vue.use(require('vue-resource'));
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-
+import VueBpmn from 'vue-bpmn'
 Vue.component('pricing',require('./components/Pricing.vue').default);
 Vue.component('messenger',require('./components/messenger.vue').default);
 Vue.component('bpmn_ds',require('./components/bpmn_ds.vue').default);
 Vue.component('bpmn_table',require('./components/bpmn_table.vue').default);
 Vue.component('bpmn_insert',require('./components/bpmn_insert.vue').default);
+Vue.component('bpmn_diag',require('./components/bpmn_diag.vue').default);
+Vue.component('vue-bpmn',VueBpmn);
+Vue.component('vue_mybpmn',require('./components/vue_mybpmn.vue').default);
 Vue.http.headers.common['X-CSRF-TOKEN']=$('meta[name="csrf-token"]').attr('content');
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -35,18 +39,33 @@ Vue.http.headers.common['X-CSRF-TOKEN']=$('meta[name="csrf-token"]').attr('conte
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 import Vuex from 'vuex'
-
+import VueRouter from 'vue-router'
 Vue.use(Vuex)
-
+Vue.config.productionTip = false
+Vue.use(VueRouter)
 import Auth from '@okta/okta-vue'
 
 Vue.use(Auth, {
-    issuer: process.env.MIX_APP_OKTA_CLIENT_URL+'/oauth2/default',
-    client_id: process.env.MIX_APP_OKTA_CLIENT_ID,
-    redirect_uri: process.env.MIX_APP_URL+'/implicit/callback',
+    issuer: process.env.MIX_OKTA_BASE_URL+'/oauth2/default',
+    client_id: process.env.MIX_OKTA_CLIENT_ID,
+    redirect_uri: process.env.MIX_OKTA_REDIRECT_URI,
+
     scope: 'openid profile email'
 })
+const routes = [
+    { path: '/implicit/callback', component: Auth.handleCallback() },
+    { path: '/', component: Pricing},
+]
+
+const router = new VueRouter({
+    mode: 'history',
+    routes
+})
+
+router.beforeEach(Vue.prototype.$auth.authRedirectGuard())
+
 const app = new Vue({
+    router,
     el: '#app',
 
 });

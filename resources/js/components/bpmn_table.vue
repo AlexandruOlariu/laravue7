@@ -11,6 +11,7 @@
             <th scope="col">faceblatulsiingredientele</th>
             <th scope="col">daulacuptor</th>
             <th scope="col">url</th>
+            <th scope="col">Diagram</th>
         </tr>
         </thead>
         <tbody>
@@ -26,6 +27,9 @@
             <td>
                 <bpmn_ds :pr='pullrequest'></bpmn_ds>
             </td>
+            <td>
+                <bpmn_diag :currentpl='pullrequest'></bpmn_diag>
+            </td>
         </tr>
 
         </tbody>
@@ -35,9 +39,10 @@
 
 <script>
     import Bpmn_insert from "./bpmn_insert";
+    import Bpmn_diag from "./bpmn_diag"
     export default {
         name: "bpmn_table",
-        components: {Bpmn_insert},
+        components: {Bpmn_insert,Bpmn_diag},
         props:[
             'prs'
         ],
@@ -51,7 +56,8 @@
               if(data==false)
                   return 0;
               else return 1;
-          }
+          },
+
         },
 
     }

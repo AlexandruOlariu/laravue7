@@ -232,4 +232,8 @@ class PullRequestController extends Controller
         $pullRequest->save();
         return $pullRequest;
     }
+    public function showDiag($id){
+        $pr=PullRequest::findOrFail($id);
+        return view('showBPMNdiag',compact('pr'));
+    }
 }

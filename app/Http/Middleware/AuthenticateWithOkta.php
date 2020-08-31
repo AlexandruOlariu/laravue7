@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Middleware;
 
 use Closure;
@@ -15,7 +14,6 @@ class AuthenticateWithOkta
      */
     public function handle($request, Closure $next)
     {
-
         if ($this->isAuthorized($request)) {
             return $next($request);
         } else {
@@ -26,7 +24,6 @@ class AuthenticateWithOkta
     public function isAuthorized($request)
     {
         if (! $request->header('Authorization')) {
-
             return false;
         }
 
@@ -44,24 +41,25 @@ class AuthenticateWithOkta
         // Attempt authorization with the provided token
         try {
 
+
             // Setup the JWT Verifier
             $jwtVerifier = (new \Okta\JwtVerifier\JwtVerifierBuilder())
                 ->setAdaptor(new \Okta\JwtVerifier\Adaptors\SpomkyLabsJose())
                 ->setAudience('api://default')
-                ->setClientId(env('MIX_APP_OKTA_CLIENT_ID','').'')
-                ->setIssuer(env('MIX_APP_OKTA_CLIENT_URL','').'')
+                ->setClientId(env('OKTA_CLIENT_ID'))
+                ->setIssuer(env('OKTA_BASE_URL'))
                 ->build();
 
             // Verify the JWT from the Authorization Header.
             $jwt = $jwtVerifier->verify($authData);
         } catch (\Exception $e) {
-
+            echo $e;
+            dd();
             // You encountered an error, return a 401.
             return false;
         }
 
         return true;
     }
-
 
 }

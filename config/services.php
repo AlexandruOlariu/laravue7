@@ -30,10 +30,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'okta' => [
-        'client_id' => env('MIX_APP_OKTA_CLIENT_ID'),
-        'client_secret' => env('MIX_APP_OKTA_CLIENT_SECRET'),
-        'redirect' => env('MIX_APP_OKTA_REDIRECT_URI'),
-        'base_url' => env('MIX_APP_OKTA_BASE_URL')
+        'client_id' => env('OKTA_CLIENT_ID'),
+        'client_secret' => env('OKTA_CLIENT_SECRET'),
+        'redirect' => env('OKTA_REDIRECT_URI'),
+        'base_url' => env('OKTA_BASE_URL')
     ],
 
 ];

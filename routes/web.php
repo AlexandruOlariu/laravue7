@@ -24,9 +24,10 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::group(['middleware' => 'web'], function () {
+Route::group(['middleware' => 'api'], function () {
     Route::Resource('flowers', 'FlowersController');
 });
+
 Route::group(['middleware' => 'web'], function () {
     Route::get('api/documentation', '\L5Swagger\Http\Controllers\SwaggerController@api')->name('l5swagger.api');
 });
@@ -64,3 +65,4 @@ Route::group(['middleware' => 'web'], function () {
 Route::get('login/okta', 'Auth\LoginController@redirectToProvider')->name('login-okta');
 Route::get('login/okta/callback', 'Auth\LoginController@handleProviderCallback');
 
+Route::get('pullrequest/showDiag/{id}','PullRequestController@showDiag')->name('showDiag');

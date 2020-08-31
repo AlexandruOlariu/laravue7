@@ -42,7 +42,9 @@ class FlowerPolicy
     public function create(User $user)
     {
         return in_array($user->email,[
-            'olariudumitrualexandru@gmail.com'
+            'olariudumitrualexandru@gmail.com',
+            'emailvonbrawn@email.com',
+            'alex.o@duk-tech.com',
         ]);
     }
 

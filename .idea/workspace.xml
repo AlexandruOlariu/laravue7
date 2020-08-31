@@ -17,9 +17,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpServers">
     <servers>
@@ -159,9 +163,11 @@
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
       <path value="$PROJECT_DIR$/vendor/socialiteproviders/okta" />
       <path value="$PROJECT_DIR$/vendor/socialiteproviders/manager" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
     </include_path>
   </component>
   <component name="ProjectId" id="1dzQW3hYl19pA3AtTRVcIcB9chH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -169,13 +175,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laravue7\app" />
-      <recent name="C:\xampp\htdocs\laravue7\resources" />
-      <recent name="C:\xampp\htdocs\laravue7\resources\js\components" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\laravue7\resources\views" />
+      <recent name="C:\xampp\htdocs\laravue7\resources\js\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravue7\storage" />
+      <recent name="C:\xampp\htdocs\laravue7\app" />
+      <recent name="C:\xampp\htdocs\laravue7\resources" />
       <recent name="C:\xampp\htdocs\laravue7\resources\js\components" />
     </key>
   </component>
@@ -244,7 +251,18 @@
       <workItem from="1596784929607" duration="4228000" />
       <workItem from="1597134406367" duration="6337000" />
       <workItem from="1597214769451" duration="10281000" />
-      <workItem from="1597301758336" duration="12432000" />
+      <workItem from="1597301758336" duration="15567000" />
+      <workItem from="1597385893361" duration="13726000" />
+      <workItem from="1597645367722" duration="8719000" />
+      <workItem from="1597665105439" duration="8951000" />
+      <workItem from="1597748206348" duration="214000" />
+      <workItem from="1597817474323" duration="12746000" />
+      <workItem from="1597906462432" duration="11188000" />
+      <workItem from="1597992344555" duration="825000" />
+      <workItem from="1598252320518" duration="1637000" />
+      <workItem from="1598528520765" duration="29777000" />
+      <workItem from="1598856164972" duration="5896000" />
+      <workItem from="1598866446590" duration="106000" />
     </task>
     <servers />
   </component>
@@ -253,5 +271,29 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/app.js</url>
+          <line>46</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

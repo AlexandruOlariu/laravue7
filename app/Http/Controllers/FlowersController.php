@@ -11,7 +11,14 @@ use mysql_xdevapi\Exception;
 
 class FlowersController extends Controller implements ShouldQueue
 {
-    /**
+    public function __construct()
+    {
+      //  $this->middleware('flowertask', ['only' => ['store','update','destroy']]);
+    }
+
+
+
+        /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -97,7 +104,7 @@ class FlowersController extends Controller implements ShouldQueue
         $adresa=$flower->url.'';
 
 
-        //return response()->json([$adresa,$this->validateRequest()], 200);
+        return response()->json([$adresa,$this->validateRequest()], 200);
     }
 
     /**
