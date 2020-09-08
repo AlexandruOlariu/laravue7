@@ -16,9 +16,10 @@ class ConverterModelToWorkflowEntity
         //$pullRequest->setMerged($model->merged);
         //$pullRequest->setApproved($model->approved);
 
-        $pullRequest->setPrimesteComanda($model->primestecomanda);
-        $pullRequest->setFaceblatulSiIngredientele($model->faceblatulsiingredientele);
-        $pullRequest->setDauLaCuptor($model->daulacuptor);
+        $pullRequest->setCompleteazaDateDeBazaFurnizor($model->CompleteazaDateDeBazaFurnizor);
+        $pullRequest->setCreeazaContFurnizor($model->CreeazaContFurnizor);
+        $pullRequest->setVerificareFurnizor($model->VerificareFurnizor);
+        $pullRequest->setIntraInCont($model->IntraInCont);
 
         if ($model->serialized_workflow != null) {
             $pullRequest->setWorkflow($this->deserializeWorkflow($model));

@@ -39,7 +39,7 @@ use App\piece\stagehandfsm\src\State\StateInterface;
 use App\piece\stagehandfsm\src\StateMachine\StateMachine;
 use App\piece\stagehandfsm\src\StateMachine\StateMachineInterface;
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
-
+use Symfony\Component\ExpressionLanguage\Expression;
 class Workflow implements EntityInterface, IdentifiableInterface, \Serializable
 {
     const DEFAULT_ROLE_ID = '__ROLE__';

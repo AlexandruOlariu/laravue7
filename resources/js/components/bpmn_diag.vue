@@ -1,15 +1,8 @@
 <template>
     <div>
-        <button @click="showMyData=!showMyData">Show/Hide diagram</button>
-        <div v-if="showMyData" style="">
-            <vue-bpmn
-            url="http://localhost/laravue7/storage/app/process/PullRequestProcess.bpmn"
-            v-on:error="handleError"
-            v-on:shown="handleShown"
-            v-on:loading="handleLoading"
-            ></vue-bpmn>
+
             <button @click="viewDiagInBrowser">viewDiagInBrowser</button>
-        </div>
+
     </div>
 </template>
 

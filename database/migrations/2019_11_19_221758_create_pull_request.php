@@ -18,10 +18,10 @@ class CreatePullRequest extends Migration
             $table->string('title');
             //$table->boolean('merged');
            // $table->boolean('approved');
-            $table->boolean('primestecomanda');
-            $table->boolean('faceblatulsiingredientele');
-            $table->boolean('daulacuptor');
-
+            $table->boolean('CompleteazaDateDeBazaFurnizor');
+            $table->boolean('CreeazaContFurnizor');
+            $table->boolean('VerificareFurnizor');
+            $table->boolean('IntraInCont');
 
             $table->string('state');
             $table->binary('serialized_workflow');

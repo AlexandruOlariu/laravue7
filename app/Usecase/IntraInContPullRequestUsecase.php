@@ -3,12 +3,13 @@
 namespace App\Usecase;
 
 use App\Participants\Dev;
+use App\Participants\Furnizor;
 use App\Workflow\Entities\PullRequest;
 use App\phpmentors\workflower\src\Process\Process;
 use App\phpmentors\workflower\src\Process\WorkItemContext;
 use App\phpmentors\workflower\src\Process\ProcessAwareInterface;
 
-class FaceBlatulsiIngredientelePullRequestUsecase implements ProcessAwareInterface
+class IntraInContPullRequestUsecase implements ProcessAwareInterface
 {
 
     public function setProcess(Process $process)
@@ -18,7 +19,7 @@ class FaceBlatulsiIngredientelePullRequestUsecase implements ProcessAwareInterfa
 
     public function run(PullRequest $pullRequest)
     {
-        $dev = new Dev();
+        $dev = new Furnizor();
 
         $workItem = new WorkItemContext($dev);
         $workItem->setProcessContext($pullRequest);

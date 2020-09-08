@@ -16,9 +16,10 @@ class PullRequest implements ProcessContextInterface, WorkflowSerializableInterf
     private $title;
    // private $approved = false;
    // private $merged = false;
-    private $primestecomanda=false;
-    private $faceblatulsiingredientele=false;
-    private $daulacuptor=false;
+    private $CompleteazaDateDeBazaFurnizor=false;
+    private $CreeazaContFurnizor=false;
+    private $VerificareFurnizor=false;
+    private $IntraInCont=false;
     private $workflow;
     private $serializedWorkflow;
 
@@ -39,40 +40,51 @@ class PullRequest implements ProcessContextInterface, WorkflowSerializableInterf
         return [
             'id' => $this->id,
             'title' => $this->title,
-            'primestecomanda'=>$this->primestecomanda,
-            'faceblatulsiingredientele'=>$this->faceblatulsiingredientele,
-            'daulacuptor'=>$this->daulacuptor,
+            'CompleteazaDateDeBazaFurnizor'=>$this->CompleteazaDateDeBazaFurnizor,
+            'CreeazaContFurnizor'=>$this->CreeazaContFurnizor,
+            'VerificareFurnizor'=>$this->VerificareFurnizor,
+            'IntraInCont'=>$this->IntraInCont,
+
             'data' => $this,
         ];
     }
 
-    public function isPrimesteComanda(): bool
+    public function isCompleteazaDateDeBazaFurnizor(): bool
     {
-        return $this->primestecomanda;
+        return $this->CompleteazaDateDeBazaFurnizor;
     }
 
-    public function setPrimesteComanda(bool $primestecomanda)
+    public function setCompleteazaDateDeBazaFurnizor(bool $CompleteazaDateDeBazaFurnizor)
     {
-        $this->primestecomanda = $primestecomanda;
+        $this->CompleteazaDateDeBazaFurnizor = $CompleteazaDateDeBazaFurnizor;
     }
 
-    public function isFaceblatulSiIngredientele(): bool
+    public function isCreeazaContFurnizor(): bool
     {
-        return $this->faceblatulsiingredientele;
+        return $this->CreeazaContFurnizor;
     }
 
-    public function setFaceblatulSiIngredientele(bool $faceblatulsiingredientele)
+    public function setCreeazaContFurnizor(bool $CreeazaContFurnizor)
     {
-        $this->faceblatulsiingredientele = $faceblatulsiingredientele;
+        $this->CreeazaContFurnizor = $CreeazaContFurnizor;
     }
-    public function isDauLaCuptor(): bool
+    public function isVerificareFurnizor(): bool
     {
-        return $this->daulacuptor;
+        return $this->VerificareFurnizor;
     }
 
-    public function setDauLaCuptor(bool $daulacuptor)
+    public function setVerificareFurnizor(bool $VerificareFurnizor)
     {
-        $this->daulacuptor = $daulacuptor;
+        $this->VerificareFurnizor = $VerificareFurnizor;
+    }
+    public function isIntraInCont(): bool
+    {
+        return $this->IntraInCont;
+    }
+
+    public function setIntraInCont(bool $IntraInCont)
+    {
+        $this->IntraInCont = $IntraInCont;
     }
 
 

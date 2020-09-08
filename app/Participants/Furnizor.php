@@ -5,7 +5,7 @@ namespace App\Participants;
 use App\phpmentors\workflower\src\Workflow\Participant\ParticipantInterface;
 use App\phpmentors\workflower\src\Workflow\Resource\ResourceInterface;
 
-class Dev implements ParticipantInterface
+class Furnizor implements ParticipantInterface
 {
     /**
      * @var int
@@ -22,7 +22,7 @@ class Dev implements ParticipantInterface
     public function __construct()
     {
         $this->id = 1;
-        $this->name = 'dummy-dev';
+        $this->name = 'dummy-reviewer';
     }
 
     public function getId()
@@ -32,7 +32,8 @@ class Dev implements ParticipantInterface
 
     public function hasRole($role)
     {
-        return 1;//$role === 'Lane_dev';
+        //return $role === 'Lane_reviewer';
+        return 1;
     }
 
     public function setResource(ResourceInterface $resource)

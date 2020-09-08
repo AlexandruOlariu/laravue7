@@ -47,14 +47,17 @@ Route::get('pullrequest/create', 'PullRequestController@getCreatePullRequest')->
 Route::post('pullrequest/create', 'PullRequestController@postCreatePullRequest')->name('create');
 
 
-Route::get('pullrequest/PrimesteComanda/{id}', 'PullRequestController@getPrimesteComandaPullRequest')->name('PrimesteComanda');
-Route::post('pullrequest/PrimesteComanda', 'PullRequestController@postPrimesteComandaPullRequest')->name('PrimesteComanda');
+Route::get('pullrequest/CompleteazaDateDeBazaFurnizor/{id}', 'PullRequestController@getCompleteazaDateDeBazaFurnizorPullRequest')->name('CompleteazaDateDeBazaFurnizor');
+Route::post('pullrequest/CompleteazaDateDeBazaFurnizor', 'PullRequestController@postCompleteazaDateDeBazaFurnizorPullRequest')->name('CompleteazaDateDeBazaFurnizor');
 
-Route::get('pullrequest/FaceBlatulsiIngredientele/{id}', 'PullRequestController@getFaceBlatulsiIngredientelePullRequest')->name('FaceBlatulsiIngredientele');
-Route::post('pullrequest/FaceBlatulsiIngredientele', 'PullRequestController@postFaceBlatulsiIngredientelePullRequest')->name('FaceBlatulsiIngredientele');
+Route::get('pullrequest/CreeazaContFurnizor/{id}', 'PullRequestController@getCreeazaContFurnizorPullRequest')->name('CreeazaContFurnizor');
+Route::post('pullrequest/CreeazaContFurnizor', 'PullRequestController@postCreeazaContFurnizorPullRequest')->name('CreeazaContFurnizor');
 
-Route::get('pullrequest/DauLaCuptor/{id}', 'PullRequestController@getDauLaCuptorPullRequest')->name('DauLaCuptor');
-Route::post('pullrequest/DauLaCuptor', 'PullRequestController@postDauLaCuptorPullRequest')->name('DauLaCuptor');
+Route::get('pullrequest/VerificareFurnizor/{id}', 'PullRequestController@getVerificareFurnizorPullRequest')->name('VerificareFurnizor');
+Route::post('pullrequest/VerificareFurnizor', 'PullRequestController@postVerificareFurnizorPullRequest')->name('VerificareFurnizor');
+
+Route::get('pullrequest/IntraInCont/{id}', 'PullRequestController@getIntraInContPullRequest')->name('IntraInCont');
+Route::post('pullrequest/IntraInCont', 'PullRequestController@postIntraInContPullRequest')->name('IntraInCont');
 
 Route::group(['middleware' => 'web'], function () {
     Route::get('bar', function () {

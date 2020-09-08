@@ -8,7 +8,7 @@
     <vue_mybpmn
     url="http://localhost/laravue7/storage/app/process/PullRequestProcess.bpmn"
     process="{{$pr}}"
-    style="width: 600px;height: 600px"
+    style="width: 1200px;height: 600px"
     >
     </vue_mybpmn>
 </div>

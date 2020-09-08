@@ -170,19 +170,22 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/phpmentors" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\laravue7\resources\views" />
-      <recent name="C:\xampp\htdocs\laravue7\resources\js\components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\laravue7\storage" />
       <recent name="C:\xampp\htdocs\laravue7\app" />
       <recent name="C:\xampp\htdocs\laravue7\resources" />
+      <recent name="C:\xampp\htdocs\laravue7\resources\js\components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\laravue7\app\phpmentors" />
+      <recent name="C:\xampp\htdocs\laravue7\app\Participants" />
+      <recent name="C:\xampp\htdocs\laravue7\app\Usecase" />
+      <recent name="C:\xampp\htdocs\laravue7\resources\views" />
       <recent name="C:\xampp\htdocs\laravue7\resources\js\components" />
     </key>
   </component>
@@ -262,7 +265,9 @@
       <workItem from="1598252320518" duration="1637000" />
       <workItem from="1598528520765" duration="29777000" />
       <workItem from="1598856164972" duration="5896000" />
-      <workItem from="1598866446590" duration="106000" />
+      <workItem from="1598866446590" duration="33737000" />
+      <workItem from="1599043089176" duration="508000" />
+      <workItem from="1599044360923" duration="633000" />
     </task>
     <servers />
   </component>

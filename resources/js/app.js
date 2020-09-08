@@ -48,8 +48,8 @@ import Auth from '@okta/okta-vue'
 Vue.use(Auth, {
     issuer: process.env.MIX_OKTA_BASE_URL+'/oauth2/default',
     client_id: process.env.MIX_OKTA_CLIENT_ID,
+    client_secret:process.env.MIX_OKTA_CLIENT_SECRET,
     redirect_uri: process.env.MIX_OKTA_REDIRECT_URI,
-
     scope: 'openid profile email'
 })
 const routes = [

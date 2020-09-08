@@ -69,6 +69,14 @@
                         },
                         html: $overlayHtml
                     });
+                var EventNode = document.querySelector('[data-element-id='+JSON.parse(self.proces).state+']');
+                console.log(JSON.parse(self.proces));
+                EventNode.addEventListener('click', function(e) {
+                    alert('Updated at : '+JSON.parse(self.proces).updated_at);
+                });
+
+
+
                 })
 
 

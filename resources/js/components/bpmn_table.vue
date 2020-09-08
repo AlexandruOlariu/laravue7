@@ -7,9 +7,7 @@
             <th scope="col">#</th>
             <th scope="col">title</th>
             <th scope="col">state</th>
-            <th scope="col">primestecomanda</th>
-            <th scope="col">faceblatulsiingredientele</th>
-            <th scope="col">daulacuptor</th>
+
             <th scope="col">url</th>
             <th scope="col">Diagram</th>
         </tr>
@@ -21,9 +19,7 @@
             <td>{{ pullrequest.id }}</td>
             <td>{{ pullrequest.title }}</td>
             <td>{{ pullrequest.state }}</td>
-            <td>{{ toInt(pullrequest.primestecomanda) }}</td>
-            <td>{{ toInt(pullrequest.faceblatulsiingredientele) }}</td>
-            <td>{{ toInt(pullrequest.daulacuptor) }}</td>
+
             <td>
                 <bpmn_ds :pr='pullrequest'></bpmn_ds>
             </td>
